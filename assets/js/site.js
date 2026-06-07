@@ -16,6 +16,16 @@
     setLang(doc.dataset.lang === "ko" ? "en" : "ko");
   });
 
+  /* ── scroll-aware header ─────────────────────────────── */
+  var head = document.querySelector(".site-head");
+  if (head) {
+    var onScroll = function () {
+      head.classList.toggle("is-scrolled", window.scrollY > 12);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
   /* ── mobile nav ──────────────────────────────────────── */
   var toggle = document.querySelector(".navtoggle");
   var nav = document.getElementById("nav");
@@ -32,25 +42,6 @@
     });
   }
 
-  /* ── scroll-triggered reveal (re-arm elements below fold) ─ */
-  var reduce = window.matchMedia &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!reduce && "IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) {
-          en.target.style.animationPlayState = "running";
-          io.unobserve(en.target);
-        }
-      });
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.06 });
-
-    document.querySelectorAll(".reveal").forEach(function (el) {
-      var box = el.getBoundingClientRect();
-      if (box.top > window.innerHeight * 1.1) {
-        el.style.animationPlayState = "paused";
-        io.observe(el);
-      }
-    });
-  }
+  // Reveal is a one-time calm fade on load (CSS only) — no scroll-
+  // triggered motion, keeping the page static as the user scrolls.
 })();

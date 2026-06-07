@@ -1,0 +1,12 @@
+{
+  "name": "maq-lab-site-tools",
+  "private": true,
+  "description": "Dev-only tooling for the MAQ Lab site (screenshot QA). Not part of the Jekyll build.",
+  "type": "module",
+  "scripts": {
+    "shots": "node tools/screenshot.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0"
+  }
+}

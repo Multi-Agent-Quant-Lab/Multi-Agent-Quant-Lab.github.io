@@ -12,24 +12,7 @@ lede_en: The people who own the hypotheses and the calls — everyone brings som
 
 <ul class="people">
   {% for m in site.data.members %}
-  <li class="person reveal" style="--i:{{ forloop.index0 }}">
-    <div class="person__avatar">
-      {% if m.photo and m.photo != '' %}
-        <img src="{{ '/assets/img/people/' | append: m.photo | relative_url }}" alt="{{ m.name_en }}" loading="lazy">
-      {% else %}
-        {% assign seed = forloop.index0 | modulo: 6 %}
-        <span class="mono mono--{{ seed }}" aria-hidden="true">{{ m.name_en | slice: 0 }}</span>
-      {% endif %}
-    </div>
-    <h3 class="person__name">{% include t.html ko=m.name_ko en=m.name_en %}</h3>
-    <p class="person__role">{% include t.html ko=m.role_ko en=m.role_en %}</p>
-    <p class="person__bio">{% include t.html ko=m.bio_ko en=m.bio_en %}</p>
-    {% if m.github and m.github != '' %}
-      <a class="person__link" href="https://github.com/{{ m.github }}" target="_blank" rel="noopener">@{{ m.github }}</a>
-    {% elsif m.link and m.link != '' %}
-      <a class="person__link" href="{{ m.link }}" target="_blank" rel="noopener">↗</a>
-    {% endif %}
-  </li>
+    {% include member-card.html member=m index=forloop.index0 %}
   {% endfor %}
 </ul>
 

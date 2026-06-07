@@ -45,3 +45,8 @@ exclude:
   - README.md
   - vendor
   - .omc
+  - node_modules
+  - package.json
+  - package-lock.json
+  - tools
+  - .shots

@@ -9,6 +9,11 @@ vendor/
 .bundle/
 Gemfile.lock
 
+# Node tooling (screenshot QA) + outputs
+node_modules/
+package-lock.json
+.shots/
+
 # OMC working dir
 .omc/
 

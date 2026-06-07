@@ -1,0 +1,27 @@
+{%- comment -%}
+  One member card. Params:
+    member  : a member hash from _data/members.yml
+    index   : forloop.index0 (drives avatar color + reveal stagger)
+    compact : true → hide bio & link (used on the home preview)
+{%- endcomment -%}
+{%- assign m = include.member -%}
+{%- assign seed = include.index | modulo: 6 -%}
+<li class="person reveal" style="--i:{{ include.index }}">
+  <div class="person__avatar">
+    {% if m.photo and m.photo != '' %}
+      <img src="{{ '/assets/img/people/' | append: m.photo | relative_url }}" alt="{{ m.name_en }}" loading="lazy">
+    {% else %}
+      <span class="mono mono--{{ seed }}" aria-hidden="true">{{ m.name_en | slice: 0 }}</span>
+    {% endif %}
+  </div>
+  <h3 class="person__name">{% include t.html ko=m.name_ko en=m.name_en %}</h3>
+  <p class="person__role">{% include t.html ko=m.role_ko en=m.role_en %}</p>
+  {% unless include.compact %}
+    <p class="person__bio">{% include t.html ko=m.bio_ko en=m.bio_en %}</p>
+    {% if m.github and m.github != '' %}
+      <a class="person__link" href="https://github.com/{{ m.github }}" target="_blank" rel="noopener">@{{ m.github }}</a>
+    {% elsif m.link and m.link != '' %}
+      <a class="person__link" href="{{ m.link }}" target="_blank" rel="noopener">↗</a>
+    {% endif %}
+  {% endunless %}
+</li>
