@@ -1,0 +1,18 @@
+# ── Research / study topics ───────────────────────────────
+# Rendered as the "FOCUS AREAS" cards. Add as many as you like.
+
+- code: "01"
+  title: "Multi-Agent Systems"
+  body: "Markets as games of interacting agents — cooperation, competition, and emergent price dynamics."
+
+- code: "02"
+  title: "Systematic Strategies"
+  body: "Signal research, factor models, and rules-based portfolios backed by rigorous backtests."
+
+- code: "03"
+  title: "Reinforcement Learning"
+  body: "Sequential decision-making for execution, market-making, and adaptive allocation."
+
+- code: "04"
+  title: "Infra & Data"
+  body: "Reproducible pipelines, clean datasets, and tooling that lets research move fast."

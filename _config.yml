@@ -1,0 +1,39 @@
+# ── Multi-Agent Quant Lab ─────────────────────────────────
+# Site configuration for GitHub Pages (org site → served at root)
+
+title: "Multi-Agent Quant Lab"
+tagline: "systematic strategies, together"
+description: >-
+  A study collective exploring multi-agent systems and
+  systematic / quantitative markets.
+
+# Org site lives at the domain root, so baseurl is empty.
+url: "https://multi-agent-quant-lab.github.io"
+baseurl: ""
+
+lang: "en"
+timezone: "Asia/Seoul"
+
+# Social / contact (edit freely)
+github_org: "Multi-Agent-Quant-Lab"
+email: ""
+
+# ── Build settings ────────────────────────────────────────
+# GitHub Pages runs Jekyll in safe mode. Everything here
+# (layouts, includes, data, sass) works without custom plugins.
+markdown: kramdown
+permalink: pretty
+
+sass:
+  style: compressed
+
+# Plugins available on the GitHub Pages allowlist
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .omc

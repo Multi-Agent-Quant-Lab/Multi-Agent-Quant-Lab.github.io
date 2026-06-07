@@ -1,0 +1,25 @@
+# ── Ticker tape items ─────────────────────────────────────
+# Scrolling marquee at the very top. `delta` sets the color:
+# positive (+) = green, negative (-) = amber/red, neutral = dim.
+
+- sym: "KOSPI"
+  val: "2,612.4"
+  delta: "+1.20%"
+- sym: "S&P500"
+  val: "5,431.6"
+  delta: "+0.34%"
+- sym: "NVDA"
+  val: "131.20"
+  delta: "+3.41%"
+- sym: "BTC"
+  val: "67,840"
+  delta: "-0.82%"
+- sym: "KRW=X"
+  val: "1,372.0"
+  delta: "-0.11%"
+- sym: "VIX"
+  val: "13.42"
+  delta: "+2.05%"
+- sym: "AGENTS"
+  val: "online"
+  delta: "ok"

@@ -1,0 +1,129 @@
+---
+layout: default
+---
+
+<!-- ── Ticker tape ──────────────────────────────────────── -->
+<div class="ticker" role="marquee" aria-label="market ticker">
+  <div class="ticker__track">
+    {% for n in (1..2) %}
+      {% for t in site.data.ticker %}
+        {% assign d = t.delta | slice: 0 %}
+        <span class="ticker__item {% if d == '+' %}is-up{% elsif d == '-' %}is-down{% else %}is-flat{% endif %}">
+          <b>{{ t.sym }}</b> {{ t.val }} <em>{{ t.delta }}</em>
+        </span>
+        <span class="ticker__sep">·</span>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>
+
+<!-- ── Top bar ──────────────────────────────────────────── -->
+<header class="topbar">
+  <a class="topbar__brand" href="{{ '/' | relative_url }}">
+    <span class="dot"></span> MAQ&nbsp;LAB
+  </a>
+  <nav class="topbar__nav">
+    <a href="#members">members</a>
+    <a href="#focus">focus</a>
+    <a href="https://github.com/{{ site.github_org }}" target="_blank" rel="noopener">github&nbsp;↗</a>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <!-- ── Hero ───────────────────────────────────────────── -->
+  <section class="hero">
+    <p class="hero__kicker reveal" style="--d:0">
+      // {{ site.github_org }} &nbsp;—&nbsp; est. 2026 &nbsp;·&nbsp; seoul
+    </p>
+    <h1 class="hero__title">
+      <span class="reveal" style="--d:1">MULTI&mdash;AGENT</span>
+      <span class="reveal glow" style="--d:2">QUANT&nbsp;LAB</span>
+    </h1>
+    <p class="hero__lede reveal" style="--d:3">
+      &gt; {{ site.tagline }}<span class="cursor">_</span>
+    </p>
+    <p class="hero__desc reveal" style="--d:4">
+      {{ site.description }}
+    </p>
+
+    <div class="hero__stats reveal" style="--d:5">
+      <div class="stat"><b data-count="{{ site.data.members | size }}">{{ site.data.members | size }}</b><span>members</span></div>
+      <div class="stat"><b data-count="{{ site.data.topics | size }}">{{ site.data.topics | size }}</b><span>focus&nbsp;areas</span></div>
+      <div class="stat"><b>24/7</b><span>markets</span></div>
+      <div class="stat"><b class="up">▲</b><span>compounding</span></div>
+    </div>
+  </section>
+
+  <!-- ── Members ────────────────────────────────────────── -->
+  <section class="panel" id="members">
+    <div class="panel__head">
+      <h2>MEMBERS</h2>
+      <span class="panel__meta">{{ site.data.members | size }} entries · live</span>
+    </div>
+
+    <div class="roster" role="table">
+      <div class="roster__head" role="row">
+        <span>handle</span><span>name</span><span>role</span><span>focus</span><span class="ra">link</span>
+      </div>
+      {% for m in site.data.members %}
+      <div class="roster__row {% if m.status == 'ALUMNI' %}is-alumni{% endif %}" role="row">
+        <span class="rc rc-handle" role="cell">
+          <i class="pulse"></i>{{ m.handle }}
+        </span>
+        <span class="rc rc-name" role="cell">{{ m.name }}</span>
+        <span class="rc rc-role" role="cell">{{ m.role }}</span>
+        <span class="rc rc-focus" role="cell">{{ m.focus }}</span>
+        <span class="rc rc-link ra" role="cell">
+          {% if m.github and m.github != '' %}
+            <a href="https://github.com/{{ m.github }}" target="_blank" rel="noopener">@{{ m.github }}</a>
+          {% elsif m.link and m.link != '' %}
+            <a href="{{ m.link }}" target="_blank" rel="noopener">↗</a>
+          {% else %}
+            <span class="muted">—</span>
+          {% endif %}
+        </span>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="panel__hint">// edit <code>_data/members.yml</code> to add people</p>
+  </section>
+
+  <!-- ── Focus areas ────────────────────────────────────── -->
+  <section class="panel" id="focus">
+    <div class="panel__head">
+      <h2>FOCUS&nbsp;AREAS</h2>
+      <span class="panel__meta">what we study</span>
+    </div>
+
+    <div class="cards">
+      {% for t in site.data.topics %}
+      <article class="card">
+        <span class="card__code">{{ t.code }}</span>
+        <h3 class="card__title">{{ t.title }}</h3>
+        <p class="card__body">{{ t.body }}</p>
+        <span class="card__line" aria-hidden="true"></span>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- ── Join / contact ─────────────────────────────────── -->
+  <section class="join">
+    <div class="join__prompt">
+      <span class="join__path">maq-lab:~$</span>
+      <span class="join__cmd" data-type="git clone &amp;&amp; join us"></span><span class="cursor">_</span>
+    </div>
+    <p class="join__text">
+      Open study group. Curious about systematic &amp; agentic markets?
+      <a href="https://github.com/{{ site.github_org }}" target="_blank" rel="noopener">Find us on GitHub ↗</a>
+    </p>
+  </section>
+
+</main>
+
+<!-- ── Footer ──────────────────────────────────────────── -->
+<footer class="foot">
+  <span>© {{ 'now' | date: '%Y' }} {{ site.title }}</span>
+  <span class="foot__sig">built with jekyll · served by github&nbsp;pages</span>
+</footer>

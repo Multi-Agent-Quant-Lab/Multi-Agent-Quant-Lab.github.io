@@ -1,0 +1,35 @@
+# ── Lab members ───────────────────────────────────────────
+# Add / edit members here. Each entry renders as a row in the
+# MEMBERS terminal table on the home page.
+#
+#   handle  : ticker-style short id (shown in mono, uppercase)
+#   name    : full display name
+#   role    : Lead / Quant / Engineer / Researcher ...
+#   focus   : short comma-free phrase of research interests
+#   github  : github username (optional, omit or leave blank)
+#   link    : any external url — scholar, blog, linkedin (optional)
+#   status  : ACTIVE / ALUMNI  (controls the colored dot)
+
+- handle: "SUNG.M"
+  name: "Minsuk Sung"
+  role: "Lead"
+  focus: "RL / execution algorithms"
+  github: "minsuk-sung"
+  link: ""
+  status: "ACTIVE"
+
+- handle: "MEMBER.2"
+  name: "Your Name"
+  role: "Quant"
+  focus: "volatility / options"
+  github: ""
+  link: ""
+  status: "ACTIVE"
+
+- handle: "MEMBER.3"
+  name: "Your Name"
+  role: "Engineer"
+  focus: "data infra / backtesting"
+  github: ""
+  link: ""
+  status: "ACTIVE"
