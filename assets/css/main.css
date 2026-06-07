@@ -302,7 +302,7 @@ html[data-lang="en"] .lang [data-lang-set="en"] { color: var(--navy); font-weigh
 .layerrow { display: grid; grid-template-columns: 56px 210px 1fr; align-items: center; gap: 14px; padding: 18px 22px; background: var(--paper-2); border-bottom: 1px solid var(--line); transition: background .2s; }
 .layerrow:last-child { border-bottom: 0; }
 .layerrow:hover { background: var(--paper-3); }
-.layerrow__ico { font-size: 22px; }
+.layerrow__ico { font-size: 13px; font-weight: 700; color: var(--burg); letter-spacing: 0.1em; font-variant-numeric: tabular-nums; }
 .layerrow__name { font-weight: 700; color: var(--navy); }
 .layerrow__desc { color: var(--ink-soft); font-size: 15px; }
 
