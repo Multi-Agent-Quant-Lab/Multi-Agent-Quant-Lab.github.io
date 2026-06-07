@@ -1,58 +1,91 @@
-# Multi-Agent Quant Lab
+# Multi-Agent Quant Lab — Website
 
-Website for the **Multi-Agent Quant Lab** study collective — a "Terminal Quant"
-themed static site built with [Jekyll](https://jekyllrb.com/) and served by
-[GitHub Pages](https://pages.github.com/).
+Bilingual (🇰🇷/🇬🇧) website for the **Multi-Agent Quant Lab** — an open study
+building live-ready algorithmic trading systems with AI agents. Built with
+[Jekyll](https://jekyllrb.com/), served by [GitHub Pages](https://pages.github.com/),
+in a warm-academic / journal style.
 
 🔗 **Live:** https://multi-agent-quant-lab.github.io
 
-## Editing content
+## Pages
 
-Most updates are just YAML — no HTML needed:
+| Path | KO | What |
+|------|----|------|
+| `/` | 홈 | Overview, mission, layers, recent activities |
+| `/about/` | 소개 | Mission, why multi-agent, who should join |
+| `/research/` | 연구 | Research tracks, build layers, tech stack |
+| `/people/` | 멤버 | Circular portraits + short bios (10 members) |
+| `/activities/` | 활동 | Study / session / talk logs |
+
+## Editing content (mostly YAML)
 
 | What | File |
 |------|------|
-| Members | `_data/members.yml` |
-| Focus / study areas | `_data/topics.yml` |
-| Ticker tape items | `_data/ticker.yml` |
-| Title, tagline, links | `_config.yml` |
+| Members (name / role / bio / photo) | `_data/members.yml` |
+| Navigation | `_data/nav.yml` |
+| Title / tagline / contact links | `_config.yml` |
+| Activity posts | `_activities/YYYY-MM-DD-slug.md` |
 
-Adding a member, for example:
+### Bilingual text
+
+Everything ships in **Korean + English**; a toggle (top-right, default 한국어)
+switches instantly and remembers the choice. In data files use `*_ko` / `*_en`
+fields. In HTML, wrap inline text as:
+
+```liquid
+{% include t.html ko="홈" en="Home" %}
+```
+
+or use paired elements `<span lang="ko">…</span><span lang="en">…</span>`.
+
+### Member photos
+
+Drop an image in `assets/img/people/` and set `photo: filename.jpg` in
+`_data/members.yml`. With no photo, an initials circle is shown automatically.
+
+### Add an activity
+
+Create `_activities/2026-06-14-my-session.md`:
 
 ```yaml
-# _data/members.yml
-- handle: "KIM.J"
-  name: "Jiwon Kim"
-  role: "Quant"
-  focus: "volatility / options"
-  github: "jiwon"      # optional
-  link: ""             # optional external url
-  status: "ACTIVE"     # ACTIVE | ALUMNI
+---
+kind: study          # session | study | talk  (controls the tag color)
+kind_ko: 스터디
+kind_en: Study
+title_ko: 제목
+title_en: Title
+summary_ko: 한 줄 요약
+summary_en: One-line summary
+date: 2026-06-14
+tags: [macro, signals]
+---
+<div class="prose"> … bilingual body with <span lang="…"> … </span> … </div>
 ```
 
-## Local preview (optional)
-
-GitHub Pages builds the site for you on every push, so this is only needed if
-you want to preview changes before pushing.
+## Local preview
 
 ```bash
-gem install bundler jekyll   # one-time
-bundle install
-bundle exec jekyll serve      # → http://localhost:4000
-```
-
-## Structure
-
-```
-_config.yml          site config
-index.html           home page (all sections)
-_layouts/default.html  HTML shell, fonts, overlays
-_data/               members / topics / ticker content
-assets/css/main.css  the Terminal Quant theme
-assets/js/terminal.js  typewriter + count-up enhancements
+bundle install            # one-time (uses the github-pages gem set)
+bundle exec jekyll serve  # → http://localhost:4000
 ```
 
 ## Deployment
 
-Pushing to `main` triggers a GitHub Pages build automatically. Make sure
-**Settings → Pages → Source** is set to **Deploy from a branch → `main` / `root`**.
+Pushing to `main` triggers an automatic GitHub Pages build. Source is
+**Settings → Pages → Deploy from a branch → `main` / `root`**.
+
+## Structure
+
+```
+_config.yml             site config + activities collection
+_data/                  members.yml · nav.yml
+_layouts/               default · page · activity
+_includes/t.html        bilingual inline helper
+index.html              home
+about.html research.html
+people/  activities/    section index pages
+_activities/            activity posts (collection)
+assets/css/main.css     "Warm Academic" theme
+assets/js/site.js       lang toggle · mobile nav · reveal
+assets/img/             maq-profile.png (logo) · people/
+```

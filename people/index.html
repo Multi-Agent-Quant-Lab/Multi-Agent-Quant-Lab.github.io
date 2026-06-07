@@ -1,0 +1,36 @@
+---
+layout: page
+title: People
+permalink: /people/
+eyebrow_ko: 멤버
+eyebrow_en: People
+title_ko: 사람이 가설을, 에이전트가 반복을
+title_en: People set the thesis. Agents do the reps.
+lede_ko: 가설과 판단을 맡는 사람들. 사람마다 잘하는 게 다르기 때문에, 어디서든 어울리는 자리가 있습니다.
+lede_en: The people who own the hypotheses and the calls — everyone brings something different.
+---
+
+<ul class="people">
+  {% for m in site.data.members %}
+  <li class="person reveal" style="--i:{{ forloop.index0 }}">
+    <div class="person__avatar">
+      {% if m.photo and m.photo != '' %}
+        <img src="{{ '/assets/img/people/' | append: m.photo | relative_url }}" alt="{{ m.name_en }}" loading="lazy">
+      {% else %}
+        {% assign seed = forloop.index0 | modulo: 6 %}
+        <span class="mono mono--{{ seed }}" aria-hidden="true">{{ m.name_en | slice: 0 }}</span>
+      {% endif %}
+    </div>
+    <h3 class="person__name">{% include t.html ko=m.name_ko en=m.name_en %}</h3>
+    <p class="person__role">{% include t.html ko=m.role_ko en=m.role_en %}</p>
+    <p class="person__bio">{% include t.html ko=m.bio_ko en=m.bio_en %}</p>
+    {% if m.github and m.github != '' %}
+      <a class="person__link" href="https://github.com/{{ m.github }}" target="_blank" rel="noopener">@{{ m.github }}</a>
+    {% elsif m.link and m.link != '' %}
+      <a class="person__link" href="{{ m.link }}" target="_blank" rel="noopener">↗</a>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+
+<p class="hint muted">{% include t.html ko="멤버 정보는" en="Edit members in" %} <code>_data/members.yml</code> {% include t.html ko="에서 수정합니다. 사진은" en="— drop photos in" %} <code>assets/img/people/</code> {% include t.html ko="에 넣고 photo 필드에 파일명을 적으면 됩니다." en="and set the photo field." %}</p>

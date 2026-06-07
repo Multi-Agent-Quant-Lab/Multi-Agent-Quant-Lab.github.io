@@ -1,29 +1,84 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en' }}">
+<html lang="ko" data-lang="ko">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0e0f">
+  <meta name="theme-color" content="#1d2b46">
+
+  <!-- Set language before paint to avoid a flash of the wrong language -->
+  <script>try{document.documentElement.dataset.lang=localStorage.getItem('maq-lang')||'ko';document.documentElement.lang=document.documentElement.dataset.lang;}catch(e){}</script>
 
   <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
-
   {% seo %}
 
-  <!-- Distinctive type: Archivo (display) + IBM Plex Mono (system/data) -->
+  <link rel="icon" type="image/png" href="{{ '/assets/img/maq-profile.png' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Hahmlet:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
-  <!-- CRT atmosphere overlays -->
-  <div class="fx fx-scanlines" aria-hidden="true"></div>
-  <div class="fx fx-vignette" aria-hidden="true"></div>
-  <div class="fx fx-grid" aria-hidden="true"></div>
+  <a class="skip" href="#main">{% include t.html ko="본문으로" en="Skip to content" %}</a>
 
-  {{ content }}
+  <header class="site-head">
+    <div class="site-head__in">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <img class="brand__mark" src="{{ '/assets/img/maq-profile.png' | relative_url }}" alt="MAQ Lab" width="40" height="40">
+        <span class="brand__txt">
+          <b>MAQ&nbsp;Lab</b>
+          <i>{% include t.html ko="멀티에이전트 퀀트 랩" en="Multi-Agent Quant Lab" %}</i>
+        </span>
+      </a>
 
-  <script src="{{ '/assets/js/terminal.js' | relative_url }}" defer></script>
+      <button class="navtoggle" aria-label="menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        {% assign cur = page.url | default: '/' %}
+        {% for item in site.data.nav %}
+          {% assign active = false %}
+          {% if item.url == '/' %}
+            {% if cur == '/' %}{% assign active = true %}{% endif %}
+          {% elsif cur contains item.url %}
+            {% assign active = true %}
+          {% endif %}
+          <a class="nav__link {% if active %}is-active{% endif %}" href="{{ item.url | relative_url }}">
+            {% include t.html ko=item.ko en=item.en %}
+          </a>
+        {% endfor %}
+
+        <button class="lang" type="button" aria-label="language">
+          <span data-lang-set="ko">한국어</span>
+          <span class="lang__sep">/</span>
+          <span data-lang-set="en">EN</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="site-foot">
+    <div class="site-foot__in">
+      <div class="site-foot__brand">
+        <img src="{{ '/assets/img/maq-profile.png' | relative_url }}" alt="" width="44" height="44">
+        <p>
+          <b>Multi-Agent Quant Lab</b><br>
+          <span class="muted">{% include t.html ko="사람도 에이전트, AI도 에이전트 — 함께 굴리는 트레이딩 데스크." en="Humans set the thesis. Agents do the reps. Markets do the judging." %}</span>
+        </p>
+      </div>
+      <nav class="site-foot__links">
+        <a href="https://github.com/{{ site.github_org }}" target="_blank" rel="noopener">GitHub</a>
+        <a href="{{ site.kakao }}" target="_blank" rel="noopener">KakaoTalk</a>
+        <a href="{{ site.telegram }}" target="_blank" rel="noopener">Telegram</a>
+      </nav>
+      <p class="site-foot__copy muted">© {{ 'now' | date: '%Y' }} Multi-Agent Quant Lab · {% include t.html ko="Jekyll · GitHub Pages로 빌드" en="Built with Jekyll · GitHub Pages" %}</p>
+    </div>
+  </footer>
+
+  <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
 </body>
 </html>

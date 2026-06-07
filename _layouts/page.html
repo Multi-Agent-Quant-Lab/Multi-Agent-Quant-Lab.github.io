@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<section class="pagehead reveal">
+  <div class="wrap">
+    {% if page.eyebrow_ko or page.eyebrow_en %}
+      <p class="eyebrow">{% include t.html ko=page.eyebrow_ko en=page.eyebrow_en %}</p>
+    {% endif %}
+    <h1 class="pagehead__title">{% include t.html ko=page.title_ko en=page.title_en %}</h1>
+    {% if page.lede_ko or page.lede_en %}
+      <p class="pagehead__lede">{% include t.html ko=page.lede_ko en=page.lede_en %}</p>
+    {% endif %}
+  </div>
+</section>
+
+<div class="wrap page-body">
+  {{ content }}
+</div>

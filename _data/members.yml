@@ -1,35 +1,121 @@
-# ── Lab members ───────────────────────────────────────────
-# Add / edit members here. Each entry renders as a row in the
-# MEMBERS terminal table on the home page.
+# ── Lab members (10) ──────────────────────────────────────
+# Each entry renders as a circular portrait + short bio card on
+# the People (멤버) page. All text fields are bilingual (ko/en).
 #
-#   handle  : ticker-style short id (shown in mono, uppercase)
-#   name    : full display name
-#   role    : Lead / Quant / Engineer / Researcher ...
-#   focus   : short comma-free phrase of research interests
-#   github  : github username (optional, omit or leave blank)
-#   link    : any external url — scholar, blog, linkedin (optional)
-#   status  : ACTIVE / ALUMNI  (controls the colored dot)
+#   photo : path under assets/img/people/ (e.g. "minsuk.jpg").
+#           Leave "" to auto-show an initials circle instead.
+#   role  : 랩 리드 / 리서처 / 엔지니어 ...  (currently placeholder)
+#   bio   : one short sentence.            (currently placeholder)
+#   github / link : optional profile links.
+#
+# Names are real; roles/bios/photos are placeholders — fill them in.
 
-- handle: "SUNG.M"
-  name: "Minsuk Sung"
-  role: "Lead"
-  focus: "RL / execution algorithms"
+- id: minsuk-sung
+  name_ko: "성민석"
+  name_en: "Minsuk Sung"
+  role_ko: "랩 리드"
+  role_en: "Lab Lead"
+  bio_ko: "강화학습·실행 알고리즘. 사람은 가설을, 에이전트는 반복을."
+  bio_en: "RL & execution. Humans set the thesis, agents do the reps."
+  photo: ""
   github: "minsuk-sung"
   link: ""
-  status: "ACTIVE"
 
-- handle: "MEMBER.2"
-  name: "Your Name"
-  role: "Quant"
-  focus: "volatility / options"
+- id: juyoung-lee
+  name_ko: "이주영"
+  name_en: "Juyoung Lee"
+  role_ko: "멤버"
+  role_en: "Member"
+  bio_ko: "한 줄 약력을 적어주세요."
+  bio_en: "Add a one-line bio here."
+  photo: ""
   github: ""
   link: ""
-  status: "ACTIVE"
 
-- handle: "MEMBER.3"
-  name: "Your Name"
-  role: "Engineer"
-  focus: "data infra / backtesting"
+- id: doohwi-cha
+  name_ko: "차두휘"
+  name_en: "Doohwi Cha"
+  role_ko: "멤버"
+  role_en: "Member"
+  bio_ko: "한 줄 약력을 적어주세요."
+  bio_en: "Add a one-line bio here."
+  photo: ""
   github: ""
   link: ""
-  status: "ACTIVE"
+
+- id: minjae-lee
+  name_ko: "이민재"
+  name_en: "Minjae Lee"
+  role_ko: "멤버"
+  role_en: "Member"
+  bio_ko: "한 줄 약력을 적어주세요."
+  bio_en: "Add a one-line bio here."
+  photo: ""
+  github: ""
+  link: ""
+
+- id: seunghan-son
+  name_ko: "손승한"
+  name_en: "Seunghan Son"
+  role_ko: "멤버"
+  role_en: "Member"
+  bio_ko: "한 줄 약력을 적어주세요."
+  bio_en: "Add a one-line bio here."
+  photo: ""
+  github: ""
+  link: ""
+
+- id: donghwa-seo
+  name_ko: "서동화"
+  name_en: "Donghwa Seo"
+  role_ko: "멤버"
+  role_en: "Member"
+  bio_ko: "한 줄 약력을 적어주세요."
+  bio_en: "Add a one-line bio here."
+  photo: ""
+  github: ""
+  link: ""
+
+- id: hyunjun-yeo
+  name_ko: "여현준"
+  name_en: "Hyunjun Yeo"
+  role_ko: "멤버"
+  role_en: "Member"
+  bio_ko: "한 줄 약력을 적어주세요."
+  bio_en: "Add a one-line bio here."
+  photo: ""
+  github: ""
+  link: ""
+
+- id: donghyun-kim
+  name_ko: "김동현"
+  name_en: "Donghyun Kim"
+  role_ko: "멤버"
+  role_en: "Member"
+  bio_ko: "한 줄 약력을 적어주세요."
+  bio_en: "Add a one-line bio here."
+  photo: ""
+  github: ""
+  link: ""
+
+- id: euihyung-lee
+  name_ko: "이의형"
+  name_en: "Euihyung Lee"
+  role_ko: "멤버"
+  role_en: "Member"
+  bio_ko: "한 줄 약력을 적어주세요."
+  bio_en: "Add a one-line bio here."
+  photo: ""
+  github: ""
+  link: ""
+
+- id: jungyu-jang
+  name_ko: "장준규"
+  name_en: "Jungyu Jang"
+  role_ko: "멤버"
+  role_en: "Member"
+  bio_ko: "한 줄 약력을 적어주세요."
+  bio_en: "Add a one-line bio here."
+  photo: ""
+  github: ""
+  link: ""

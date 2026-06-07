@@ -1,0 +1,6 @@
+{%- comment -%}
+  Inline bilingual text. Usage:
+    {% include t.html ko="홈" en="Home" %}
+  Renders both; CSS shows only the active language (html[data-lang]).
+{%- endcomment -%}
+<span class="t"><span lang="ko">{{ include.ko }}</span><span lang="en">{{ include.en }}</span></span>

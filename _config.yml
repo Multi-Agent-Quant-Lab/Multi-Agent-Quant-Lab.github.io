@@ -1,33 +1,41 @@
 # ── Multi-Agent Quant Lab ─────────────────────────────────
-# Site configuration for GitHub Pages (org site → served at root)
+# GitHub Pages org site → served at the domain root.
 
 title: "Multi-Agent Quant Lab"
-tagline: "systematic strategies, together"
+title_ko: "멀티에이전트 퀀트 랩"
+tagline_ko: "AI 에이전트로 굴러가는 알고리즘 트레이딩 시스템을 만든다"
+tagline_en: "Building algorithmic trading systems that run on AI agents"
 description: >-
-  A study collective exploring multi-agent systems and
-  systematic / quantitative markets.
+  An open study building real, live-ready algorithmic trading systems
+  with AI coding agents (Claude, Codex, Gemini) across stock & crypto markets.
 
-# Org site lives at the domain root, so baseurl is empty.
 url: "https://multi-agent-quant-lab.github.io"
 baseurl: ""
 
 lang: "en"
 timezone: "Asia/Seoul"
 
-# Social / contact (edit freely)
+# Brand / contact
 github_org: "Multi-Agent-Quant-Lab"
-email: ""
+kakao: "https://open.kakao.com/me/minsuksung"
+telegram: "https://t.me/minsuksung"
 
-# ── Build settings ────────────────────────────────────────
-# GitHub Pages runs Jekyll in safe mode. Everything here
-# (layouts, includes, data, sass) works without custom plugins.
+# ── Build ─────────────────────────────────────────────────
 markdown: kramdown
 permalink: pretty
 
 sass:
   style: compressed
 
-# Plugins available on the GitHub Pages allowlist
+collections:
+  activities:
+    output: true
+    permalink: /activities/:name/
+
+defaults:
+  - scope: { path: "", type: "activities" }
+    values: { layout: "activity" }
+
 plugins:
   - jekyll-seo-tag
 

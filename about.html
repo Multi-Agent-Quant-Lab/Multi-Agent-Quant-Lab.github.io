@@ -1,0 +1,68 @@
+---
+layout: page
+title: About
+eyebrow_ko: 소개
+eyebrow_en: About
+title_ko: 사람도 에이전트, AI도 에이전트
+title_en: Humans are agents, AI are agents
+lede_ko: MAQ Lab은 AI 코딩 에이전트를 적극 활용해, 실제 시장에서 작동하는 알고리즘 트레이딩 시스템을 처음부터 끝까지 만들어보는 오픈 스터디입니다.
+lede_en: MAQ Lab is an open study that uses AI coding agents to build live-ready algorithmic trading systems end to end.
+---
+
+<div class="cols">
+  <section class="col-main prose">
+    <h2 id="mission">{% include t.html ko="🎯 미션" en="🎯 Mission" %}</h2>
+    <p>
+      <span lang="ko"><b>Multi-Agent Quant Lab (MAQ Lab)</b> 은 <b>AI 코딩 에이전트(Claude, Codex 등)</b> 를 적극적으로 활용해 <b>실제 시장(주식 · 크립토)에서 작동하는 알고리즘 트레이딩 시스템</b>을 처음부터 끝까지 만들어보는 스터디입니다.</span>
+      <span lang="en"><b>Multi-Agent Quant Lab (MAQ Lab)</b> uses <b>AI coding agents (Claude, Codex, …)</b> to build <b>algorithmic trading systems that work in real stock &amp; crypto markets</b> — from end to end.</span>
+    </p>
+    <p>
+      <span lang="ko">논문을 쓰기 위한 연구도, 발표를 위한 백테스트도 아닙니다. 목표는 단 하나:</span>
+      <span lang="en">Not research for papers, not backtests for slides. There is only one goal:</span>
+    </p>
+    <blockquote><span lang="ko">“실거래에 투입할 수 있는 시스템을 만든다.”</span><span lang="en">“Build a system we can actually trade live.”</span></blockquote>
+    <p>
+      <span lang="ko">이를 위해 AI 에이전트는 우리의 <b>동료 개발자이자 리서처</b>로 일합니다. 사람은 가설과 판단을 맡고, 에이전트는 코드 · 데이터 · 검증을 빠르게 돌립니다.</span>
+      <span lang="en">To get there, AI agents work as our <b>fellow developers and researchers</b>. Humans own the hypotheses and judgment; agents run code, data, and validation — fast.</span>
+    </p>
+
+    <h2 id="why">{% include t.html ko="🤖 왜 “멀티에이전트”인가" en="🤖 Why “Multi-Agent”" %}</h2>
+    <p><span lang="ko">이 이름의 <i>Multi-Agent</i> 는 두 가지를 의미합니다.</span><span lang="en">The <i>Multi-Agent</i> in our name means two things.</span></p>
+    <ol>
+      <li>
+        <b>{% include t.html ko="개발 측면 — AI 코딩 에이전트와 협업" en="Build side — collaborating with AI coding agents" %}</b><br>
+        <span lang="ko">Claude Code, Codex, Gemini 등을 활용해 리서치 → 코드 → 백테스트 사이클을 압축합니다. 사람은 전략과 의사결정에 집중합니다.</span>
+        <span lang="en">Using Claude Code, Codex, and Gemini to compress the research → code → backtest loop, so humans focus on strategy and decisions.</span>
+      </li>
+      <li>
+        <b>{% include t.html ko="시스템 측면 — 역할 분담형 트레이딩 에이전트" en="System side — role-specialized trading agents" %}</b><br>
+        <span lang="ko">하나의 거대 모델이 아니라, 데이터 수집 · 시그널 생성 · 리스크 관리 · 실행 을 담당하는 여러 에이전트가 협력하는 구조를 지향합니다.</span>
+        <span lang="en">Not one giant model — a structure where separate agents for data, signals, risk, and execution cooperate.</span>
+      </li>
+    </ol>
+
+    <h2 id="join">{% include t.html ko="🤝 이런 분을 환영합니다" en="🤝 Who should join" %}</h2>
+    <p><span lang="ko">거창한 자격은 필요 없습니다. 다음 중 하나라도 해당되면 환영합니다.</span><span lang="en">No fancy résumé required. If any of these is you, come in.</span></p>
+    <ul class="checks">
+      <li><span lang="ko"><b>시장에 대한 가설은 있는데</b> 검증할 환경이 없는 분</span><span lang="en">You have <b>market hypotheses</b> but no way to test them.</span></li>
+      <li><span lang="ko"><b>개발은 익숙한데</b> 금융/시장 맥락이 부족한 분</span><span lang="en">You <b>can build</b> but lack market context.</span></li>
+      <li><span lang="ko"><b>트레이딩 경험은 있는데</b> 시스템화가 어색한 분</span><span lang="en">You've <b>traded</b> but never systematized it.</span></li>
+      <li><span lang="ko"><b>AI 에이전트로 뭔가 만들어보고 싶은</b> 분</span><span lang="en">You want to <b>build something with AI agents</b>.</span></li>
+    </ul>
+  </section>
+
+  <aside class="col-side">
+    <div class="sidecard">
+      <p class="eyebrow">{% include t.html ko="우리의 철학" en="Philosophy" %}</p>
+      <p class="sidecard__quote"><span lang="ko">“AI에게 시켜서 만든 시스템이 진짜로 시장에서 살아남는가?” — 이 질문에 답하는 것이 우리의 존재 이유입니다.</span><span lang="en">“Does a system built by directing AI actually survive in the market?” — answering that is our reason to exist.</span></p>
+    </div>
+    <div class="sidecard">
+      <p class="eyebrow">{% include t.html ko="함께하기" en="Get in touch" %}</p>
+      <ul class="sidelinks">
+        <li><a href="https://github.com/{{ site.github_org }}" target="_blank" rel="noopener">GitHub Issues · Discussions ↗</a></li>
+        <li><a href="{{ site.kakao }}" target="_blank" rel="noopener">KakaoTalk ↗</a></li>
+        <li><a href="{{ site.telegram }}" target="_blank" rel="noopener">Telegram ↗</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>

@@ -1,0 +1,78 @@
+---
+layout: page
+title: Research
+eyebrow_ko: 연구
+eyebrow_en: Research
+title_ko: 매크로는 디딤돌, 목적지는 라이브 트레이딩
+title_en: Macro is the stepping stone — live trading is the destination
+lede_ko: 알고리즘 트레이딩 시스템을 만들기 위해 지금 진행 중인 사전 리서치 트랙과 우리가 쌓는 레이어, 그리고 사용하는 도구들입니다.
+lede_en: The pre-research tracks we're running, the layers we build, and the tools we use to get a trading system live.
+---
+
+<section class="prose">
+  <h2 id="tracks">{% include t.html ko="🔬 리서치 트랙" en="🔬 Research tracks" %}</h2>
+</section>
+
+<div class="tracks">
+  <article class="track reveal">
+    <h3>📈 {% include t.html ko="Macro → Market Mapping" en="Macro → Market Mapping" %} <span class="tag tag--live">{% include t.html ko="진행 중" en="In progress" %}</span></h3>
+    <p><span lang="ko">거시 지표(물가 · 금리 · 유동성)와 자산 가격의 연결 구조 분석. 본격 전략 개발 전에 시장의 큰 흐름을 잡기 위한 준비 단계입니다.</span><span lang="en">Mapping macro indicators (inflation, rates, liquidity) to asset prices — to read the big picture before building strategies.</span></p>
+  </article>
+  <article class="track reveal">
+    <h3>🧮 {% include t.html ko="Signal Engineering" en="Signal Engineering" %}</h3>
+    <p><span lang="ko">단순 지표가 아니라 실제 트레이딩 가능한 신호로 가공. 레벨 / 변화율 / 서프라이즈 / 레짐 의존성까지 포함.</span><span lang="en">Turning raw indicators into tradable signals — levels, changes, surprises, and regime dependence.</span></p>
+  </article>
+  <article class="track reveal">
+    <h3>🧱 {% include t.html ko="Backtest Infrastructure" en="Backtest Infrastructure" %}</h3>
+    <p><span lang="ko">Point-in-Time, 슬리피지, 체결 모델까지 갖춘 거짓말하지 않는 백테스트 환경 구축.</span><span lang="en">A backtest environment that doesn't lie — point-in-time data, slippage, and fill models.</span></p>
+  </article>
+  <article class="track reveal">
+    <h3>🛡️ {% include t.html ko="Risk &amp; Execution" en="Risk &amp; Execution" %}</h3>
+    <p><span lang="ko">포지션 사이징, 손절, 상관관계 헤지, 라이브 환경 전환.</span><span lang="en">Position sizing, stop-losses, correlation hedging, and the move to live.</span></p>
+  </article>
+</div>
+
+<section class="prose">
+  <blockquote><span lang="ko">매크로 리서치는 <b>메인이 아니라 디딤돌</b> 입니다. 진짜 목적지는 <b>라이브 트레이딩 시스템</b> 입니다.</span><span lang="en">Macro research is the <b>stepping stone, not the goal</b>. The real destination is a <b>live trading system</b>.</span></blockquote>
+
+  <h2 id="layers">{% include t.html ko="🧭 무엇을 만드는가" en="🧭 What we build" %}</h2>
+</section>
+
+<div class="layertable">
+  {% assign L = "🛰️|Data Layer|시세 / 호가 / 온체인 / 매크로 데이터 수집 & PIT 정합성 관리|Market / order-book / on-chain / macro data + PIT integrity;;🧪|Research Layer|가설 생성 → 시그널 정의 → 통계 검증|Hypothesis → signal → statistical validation;;⚙️|Strategy Layer|전략 코드화, 파라미터 튜닝, 리스크 모듈|Strategy code, tuning, risk modules;;📊|Backtest Layer|재현 가능한 백테스트, 슬리피지 / 수수료 / 체결 시뮬레이션|Reproducible backtests with slippage / fees / fills;;🚀|Execution Layer|페이퍼 트레이딩 → 라이브 트레이딩 (거래소 API 연동)|Paper → live trading (exchange API);;🛡️|Ops Layer|모니터링, 알림, 사고 대응, 포지션 관리|Monitoring, alerts, incident response, positions" | split: ";;" %}
+  {% for row in L %}
+    {% assign c = row | split: "|" %}
+    {% assign c_ko = c[2] %}
+    {% assign c_en = c[3] %}
+    <div class="layerrow reveal">
+      <span class="layerrow__ico">{{ c[0] }}</span>
+      <span class="layerrow__name">{{ c[1] }}</span>
+      <span class="layerrow__desc">{% include t.html ko=c_ko en=c_en %}</span>
+    </div>
+  {% endfor %}
+</div>
+
+<section class="prose">
+  <h2 id="tech">{% include t.html ko="🛠️ 기술 &amp; 도구" en="🛠️ Tech &amp; Tools" %}</h2>
+</section>
+
+<div class="techgrid">
+  <div class="techcard reveal"><b>AI Agents</b><span>Claude Code · Codex · Gemini</span></div>
+  <div class="techcard reveal"><b>Languages</b><span>Python · Rust · JavaScript · TypeScript</span></div>
+  <div class="techcard reveal"><b>Data</b><span>DuckDB · Polars · Parquet</span></div>
+  <div class="techcard reveal"><b>Backtest</b><span>{% include t.html ko="자체 엔진 (+vectorbt / backtrader 참고)" en="In-house engine (+vectorbt / backtrader)" %}</span></div>
+  <div class="techcard reveal"><b>{% include t.html ko="국내 시장" en="Domestic" %}</b><span>{% include t.html ko="KRX · 업비트 · 빗썸" en="KRX · Upbit · Bithumb" %}</span></div>
+  <div class="techcard reveal"><b>{% include t.html ko="해외 시장" en="Global" %}</b><span>{% include t.html ko="바이낸스 · 바이비트" en="Binance · Bybit" %}</span></div>
+  <div class="techcard reveal"><b>Infra</b><span>{% include t.html ko="Docker · GitHub Actions · 셀프호스팅" en="Docker · GitHub Actions · self-hosted" %}</span></div>
+</div>
+
+<section class="prose">
+  <h2 id="projects">{% include t.html ko="📂 프로젝트 로드맵" en="📂 Project roadmap" %}</h2>
+  <p class="muted"><span lang="ko">아직 공개된 프로젝트는 없습니다. 사전 리서치가 마무리되는 대로 하나씩 오픈할 예정입니다.</span><span lang="en">No public projects yet — we'll open them up as the pre-research wraps.</span></p>
+  <ul>
+    <li><span lang="ko">🧪 거시 지표 → 자산 반응 리서치 <i>(진행 중, 비공개)</i></span><span lang="en">🧪 Macro → asset response research <i>(in progress, private)</i></span></li>
+    <li><span lang="ko">🧮 시그널 R&amp;D 라이브러리</span><span lang="en">🧮 Signal R&amp;D library</span></li>
+    <li><span lang="ko">🧱 Point-in-Time 정합 백테스트 엔진</span><span lang="en">🧱 Point-in-time backtest engine</span></li>
+    <li><span lang="ko">🚀 거래소 API 연동 실행 모듈</span><span lang="en">🚀 Exchange-API execution module</span></li>
+  </ul>
+</section>

@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<article class="wrap activity">
+  <a class="backlink" href="{{ '/activities/' | relative_url }}">← {% include t.html ko="활동 목록" en="All activities" %}</a>
+
+  <header class="activity__head reveal">
+    <p class="eyebrow">
+      <span class="kind kind--{{ page.kind | default: 'session' }}">{% include t.html ko=page.kind_ko en=page.kind_en %}</span>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time>
+    </p>
+    <h1 class="activity__title">{% include t.html ko=page.title_ko en=page.title_en %}</h1>
+    {% if page.summary_ko or page.summary_en %}
+      <p class="activity__summary">{% include t.html ko=page.summary_ko en=page.summary_en %}</p>
+    {% endif %}
+    {% if page.tags %}
+      <ul class="taglist">{% for t in page.tags %}<li>#{{ t }}</li>{% endfor %}</ul>
+    {% endif %}
+  </header>
+
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>

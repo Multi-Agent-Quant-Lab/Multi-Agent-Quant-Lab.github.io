@@ -1,0 +1,39 @@
+---
+layout: page
+title: Activities
+permalink: /activities/
+eyebrow_ko: 활동
+eyebrow_en: Activities
+title_ko: 스터디 · 세션 · 발표 기록
+title_en: Study, sessions & talks
+lede_ko: 우리가 매주 무엇을 읽고, 짜고, 돌려봤는지에 대한 기록입니다.
+lede_en: A log of what we read, built, and ran each week.
+---
+
+{% assign items = site.activities | sort: 'date' | reverse %}
+{% if items.size == 0 %}
+  <p class="muted">{% include t.html ko="아직 기록된 활동이 없습니다. 곧 채워질 예정입니다." en="No activities logged yet — coming soon." %}</p>
+{% else %}
+<ul class="timeline">
+  {% for a in items %}
+  <li class="tl reveal">
+    <a class="tl__link" href="{{ a.url | relative_url }}">
+      <span class="tl__date">
+        <b>{{ a.date | date: '%m.%d' }}</b>
+        <i>{{ a.date | date: '%Y' }}</i>
+      </span>
+      <span class="tl__body">
+        <span class="kind kind--{{ a.kind | default: 'session' }}">{% include t.html ko=a.kind_ko en=a.kind_en %}</span>
+        <span class="tl__title">{% include t.html ko=a.title_ko en=a.title_en %}</span>
+        {% if a.summary_ko or a.summary_en %}
+          <span class="tl__summary">{% include t.html ko=a.summary_ko en=a.summary_en %}</span>
+        {% endif %}
+      </span>
+      <span class="tl__go" aria-hidden="true">→</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+<p class="hint muted">{% include t.html ko="활동 글은" en="Add posts in" %} <code>_activities/YYYY-MM-DD-slug.md</code> {% include t.html ko="형식으로 추가합니다." en="format." %}</p>
