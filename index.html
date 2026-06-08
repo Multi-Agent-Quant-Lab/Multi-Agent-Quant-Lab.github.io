@@ -7,20 +7,17 @@ title: Home
 <section class="hero">
   <div class="wrap hero__in">
     <div class="hero__text">
-      <p class="hero__status reveal" style="--d:0">
-        <span class="pulse" aria-hidden="true"></span>
-        <span><b>{% include t.html ko="활동 중" en="Active" %}</b> · {% include t.html ko="서울 2026" en="Seoul 2026" %}</span>
-      </p>
+      <p class="eyebrow reveal" style="--d:0">Multi-Agent Quant Lab · {% include t.html ko="서울" en="Seoul" %}</p>
       <h1 class="hero__title reveal" style="--d:1">
-        <span lang="ko">AI 에이전트로 굴러가는<br><em>알고리즘 트레이딩</em> 시스템을 만든다</span>
-        <span lang="en">Algorithmic trading systems<br>that <em>run on AI agents</em></span>
+        <span lang="ko">실거래에 투입할 수 있는<br><em>트레이딩 시스템</em>을 만든다</span>
+        <span lang="en">Trading systems<br>built to <em>go live</em></span>
       </h1>
       <p class="hero__lede reveal" style="--d:2">
-        <span lang="ko">Claude · Codex 같은 AI 에이전트와 함께, 주식 · 크립토 시장에서 실제로 작동하는 트레이딩 시스템을 짜는 오픈 스터디.</span>
-        <span lang="en">An open study building trading systems that actually work in stock &amp; crypto markets — with AI agents like Claude &amp; Codex as teammates.</span>
+        <span lang="ko">사람은 가설을, AI 에이전트는 반복을. 주식과 크립토 시장에서 실제로 작동하는 시스템을 만드는 오픈 스터디.</span>
+        <span lang="en">Humans set the thesis. AI agents do the reps. An open study building systems that work in equity and crypto markets.</span>
       </p>
       <div class="hero__cta reveal" style="--d:3">
-        <a class="btn btn--solid" href="{{ '/about/' | relative_url }}">{% include t.html ko="소개 보기" en="About the lab" %} <span class="arr">→</span></a>
+        <a class="btn btn--solid" href="{{ '/about/' | relative_url }}">{% include t.html ko="소개" en="About" %} <span class="arr">→</span></a>
         <a class="btn btn--ghost" href="https://github.com/{{ site.github_org }}" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
     </div>
@@ -52,7 +49,7 @@ title: Home
   <div class="wrap">
     <div class="block__head reveal">
       <p class="eyebrow"><span class="eyebrow__no">02</span>{% include t.html ko="우리가 만드는 것" en="What we build" %}</p>
-      <h2 class="block__title">{% include t.html ko="여섯 개의 레이어, 사람과 에이전트가 짝을 이뤄" en="Six layers, humans &amp; agents paired" %}</h2>
+      <h2 class="block__title">{% include t.html ko="데이터에서 실행까지, 하나의 파이프라인" en="From data to execution — one pipeline" %}</h2>
     </div>
     <ol class="layers">
       <li class="layer reveal"><span class="layer__no">01</span><b>{% include t.html ko="데이터" en="Data" %}</b><span>{% include t.html ko="시세·호가·온체인·매크로 수집과 PIT 정합성" en="Market, order-book, on-chain & macro data with PIT integrity" %}</span></li>

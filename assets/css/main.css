@@ -5,22 +5,22 @@
    ════════════════════════════════════════════════════════ */
 
 :root {
-  /* palette */
-  --paper:    #f6f1e7;
-  --paper-2:  #fffdf8;
-  --paper-3:  #f1ead9;
-  --ink:      #232c39;
-  --ink-soft: #515d6b;
-  --navy:     #1d2b46;
-  --navy-2:   #2c3e60;
+  /* palette — clean white, cool neutrals, navy brand, brick accent */
+  --paper:    #ffffff;
+  --paper-2:  #f7f8fa;
+  --paper-3:  #eef1f5;
+  --ink:      #14171d;
+  --ink-soft: #4c535f;
+  --navy:     #1b2a45;
+  --navy-2:   #2a3c5e;
   --navy-3:   #41557c;
-  --burg:     #8a2f2f;
-  --burg-2:   #ab4a4a;
-  --gold:     #b08032;
+  --burg:     #a3342a;
+  --burg-2:   #c0473c;
+  --gold:     #9c7426;
   --green:    #2f6b46;
-  --line:     #e4dac6;
-  --line-2:   #efe7d6;
-  --muted:    #6f6552;
+  --line:     #e7e9ee;
+  --line-2:   #f1f2f5;
+  --muted:    #828a97;
 
   /* type */
   --sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", system-ui, "Segoe UI", Roboto, sans-serif;
@@ -51,10 +51,6 @@ html[data-lang="en"] [lang="ko"] { display: none !important; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scrollbar-color: var(--navy-3) var(--paper); }
 body {
   background-color: var(--paper);
-  background-image:
-    radial-gradient(130% 70% at 100% -5%, rgba(29,43,70,0.06), transparent 55%),
-    radial-gradient(90% 60% at -10% 105%, rgba(138,47,47,0.05), transparent 55%);
-  background-attachment: fixed;
   color: var(--ink);
   font-family: var(--body);
   font-size: 17px;
@@ -165,14 +161,7 @@ html[data-lang="en"] .lang [data-lang-set="en"] { color: var(--navy); font-weigh
 .hero { padding: clamp(40px, 7vw, 92px) 0 clamp(26px, 4vw, 48px); position: relative; }
 .hero__in { display: grid; grid-template-columns: 1.5fr 0.95fr; gap: clamp(24px, 5vw, 64px); align-items: center; }
 
-.hero__status {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-size: 12.5px; letter-spacing: 0.06em; color: var(--ink-soft);
-  background: var(--paper-2); border: 1px solid var(--line); border-radius: 100px;
-  padding: 6px 14px 6px 12px; margin-bottom: 22px;
-}
-.hero__status .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 3px rgba(47,107,70,0.15); }
-.hero__status b { color: var(--navy); font-weight: 700; }
+.hero .eyebrow { margin-bottom: 22px; }
 
 .hero__title {
   font-weight: 800; font-size: clamp(2.15rem, 5.6vw, 4.1rem);
@@ -322,14 +311,13 @@ html[data-lang="en"] .lang [data-lang-set="en"] { color: var(--navy); font-weigh
 .person__avatar img, .person__avatar .mono { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow); }
 .person__avatar img { filter: grayscale(1) contrast(1.02); transition: filter .4s; }
 .person:hover .person__avatar img { filter: grayscale(0); }
-.mono { display: grid; place-items: center; font-weight: 800; font-size: 2.4rem; color: #fbf7ee; letter-spacing: -0.02em; position: relative; overflow: hidden; }
-.mono::before { content: ""; position: absolute; inset: 0; background: linear-gradient(145deg, rgba(255,255,255,0.18), transparent 55%); }
-.mono--0 { background: linear-gradient(145deg, #25365a, var(--navy)); }
-.mono--1 { background: linear-gradient(145deg, #a83f3f, var(--burg)); }
-.mono--2 { background: linear-gradient(145deg, #3a7e54, var(--green)); }
-.mono--3 { background: linear-gradient(145deg, #4a5f88, var(--navy-3)); }
-.mono--4 { background: linear-gradient(145deg, #c0913f, var(--gold)); }
-.mono--5 { background: linear-gradient(145deg, #6a5880, #5a4a6e); }
+/* Restrained, uniform navy-family initials (premium; lets real
+   photos shine later). Subtle tonal variation, no rainbow. */
+.mono { display: grid; place-items: center; font-weight: 700; font-size: 2.3rem; color: #f3f5f9; letter-spacing: -0.02em; position: relative; overflow: hidden; background: var(--navy); }
+.mono::before { content: ""; position: absolute; inset: 0; background: linear-gradient(150deg, rgba(255,255,255,0.14), transparent 60%); }
+.mono--0, .mono--3 { background: var(--navy); }
+.mono--1, .mono--4 { background: #243650; }
+.mono--2, .mono--5 { background: #2c3e5c; }
 .person__name { font-weight: 700; font-size: 1.2rem; color: var(--navy); margin-top: 18px; letter-spacing: -0.01em; }
 .person__role { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--burg); margin-top: 5px; }
 .person__bio { color: var(--ink-soft); font-size: 14px; margin-top: 9px; line-height: 1.55; max-width: 24ch; }
