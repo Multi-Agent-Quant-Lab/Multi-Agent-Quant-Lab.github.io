@@ -80,10 +80,10 @@
 
       <nav class="fcol">
         <h4>{% include t.html ko="함께하기" en="Connect" %}</h4>
-        <ul>
-          <li><a href="https://github.com/{{ site.github_org }}" target="_blank" rel="noopener">GitHub ↗</a></li>
-          <li><a href="{{ site.kakao }}" target="_blank" rel="noopener">KakaoTalk ↗</a></li>
-          <li><a href="{{ site.telegram }}" target="_blank" rel="noopener">Telegram ↗</a></li>
+        <ul class="fsocial">
+          <li><a href="https://github.com/{{ site.github_org }}" target="_blank" rel="noopener"><img class="brandicon" src="{{ '/assets/img/brands/github.png' | relative_url }}" alt="" width="18" height="18">GitHub</a></li>
+          <li><a href="{{ site.kakao }}" target="_blank" rel="noopener"><img class="brandicon" src="{{ '/assets/img/brands/kakaotalk.png' | relative_url }}" alt="" width="18" height="18">KakaoTalk</a></li>
+          <li><a href="{{ site.telegram }}" target="_blank" rel="noopener"><img class="brandicon" src="{{ '/assets/img/brands/telegram.png' | relative_url }}" alt="" width="18" height="18">Telegram</a></li>
         </ul>
       </nav>
     </div>

@@ -1,8 +1,8 @@
 ---
 kind: talk
-kind_ko: 수료
+kind_ko: 종료
 kind_en: Wrap-up
-title_ko: 1기 수료 — 논문 리뷰에서 실거래까지
+title_ko: 1기 종료 — 논문 리뷰에서 실거래까지
 title_en: Cohort 1 wraps — from paper reviews to live trading
 summary_ko: 약 3개월간 Multi-Agent LLM 트레이딩 프레임워크를 학습하고, 시스템을 구현해 실제 시장에서 검증했습니다.
 summary_en: Over ~3 months we studied multi-agent LLM trading frameworks, built a system, and validated it in real markets.

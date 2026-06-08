@@ -1,8 +1,8 @@
 ---
 kind: talk
-kind_ko: 수료
+kind_ko: 종료
 kind_en: Wrap-up
-title_ko: 2기 수료
+title_ko: 2기 종료
 title_en: Cohort 2 wraps
 summary_ko: 2기까지 완료. 1기에서 쌓은 토대 위에 시스템을 더 단단히 다졌습니다.
 summary_en: Cohort 2 complete — building on cohort 1's foundation to harden the system further.
