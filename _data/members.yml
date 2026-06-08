@@ -16,18 +16,18 @@
   photo: minsuk-sung.png
   github: minsuk-sung
   linkedin: 'https://www.linkedin.com/in/minsuk-sung/'
-  scholar: ''
+  scholar: 'https://scholar.google.com/citations?user=_tRU3aIAAAAJ&hl=ko'
 - id: juyoung-lee
   name_ko: 이주영
   name_en: Juyoung Lee
   role_ko: 멤버
   role_en: Member
-  bio_ko: EY 컨설턴트
-  bio_en: EY Consultant
+  bio_ko: EY ML 엔지니어
+  bio_en: EY ML Engineer
   photo: juyoung-lee.png
   github: jubro839
-  linkedin: ''
-  scholar: 'https://scholar.google.com/citations?hl=ko&user=UpxR71oAAAAJ&view_op=list_works&citft=1&citft=2&citft=3&email_for_op=mssung94%40gmail.com&gmla=AIqSsVsTFe_An_EznVCaH2Yi2NShrak3Gkm9w5F-XfzDs9RWPKUavlN7GpHjTMICw3SyNVQTpfR4hEL2HNXgZqHvmCYAtb1WcXC9orbMhgBkVZMSYB9F98nZ9KOBtIYzrFtCUpLgGe19vt7BJByv9j-4t3iHO7awXOlPFwexTB8X3cs_sm6NidmkBC9whF4FPBR6xFbOKG5WTGKop4mjXP5J0gQ1YGF1F58LIm8XNfdGT1hLqYo6IoNErf7OxpsBUqlDTHUTzSGF'
+  linkedin: 'https://www.linkedin.com/in/juyeong-lee-16bb20241'
+  scholar: 'https://scholar.google.com/citations?user=UpxR71oAAAAJ&hl=ko'
 - id: doohwi-cha
   name_ko: 차두휘
   name_en: Doohwi Cha
@@ -49,7 +49,7 @@
   photo: minjae-lee.png
   github: raphaelnz
   linkedin: https://www.linkedin.com/in/mj-lee-seoul/
-  scholar: 'https://scholar.google.com/citations?hl=en&user=rkWGpNIAAAAJ&view_op=list_works&citft=1&citft=2&citft=3&email_for_op=mssung94%40gmail.com&gmla=AIqSsVuiQjcT10eARHfJ_qaiO4maXZfcsQ2xb1hgd-U502C5M0KEosuf79nz6k-xRiknfh5Hc-CgKl74_ueixZZp35vVQzqjbPHoAKQQg-mMUcxHddWPAx-kShufTqPelZZtASUdIOddjpQqVRRnafymbwYFITxgp1OJ0SOw28iJDEA3N-wKoQ_Kd1jlIDClG3Q1cBJsm5c3TzaBiFjIBkcIU3K45i70JjiYD4wasFn0RA'
+  scholar: 'https://scholar.google.com/citations?user=rkWGpNIAAAAJ&hl=en'
 - id: seunghan-son
   name_ko: 손승한
   name_en: Seunghan Son
@@ -82,7 +82,7 @@
   photo: hyunjun-yeo.png
   github: hjyeo30
   linkedin: ''
-  scholar: 'https://scholar.google.com/citations?hl=en&user=BxqAB8gAAAAJ&view_op=list_works&citft=1&citft=2&citft=3&email_for_op=mssung94%40gmail.com&gmla=AIqSsVvx_F9Lrp2xU6sYf-uS1sxZ0TCuTvTrhYODHn3dnQNKa9dqpdeqO4mzomIDfCVXxPhqwrxjNhcB1XT7oXLE5Pq0Wc0jz4DYe4tLxVFklNWFXr4skFODosrnSlvr72ppMOT_mehRO485FB1g8Vq27u7CeAJqWH2UIQRb9alfPV8ifQAdhSLVVBU8-7UUnaKJX1IvFd9mDdu4xcqghq8uYBtln5TYxyj7KIkhmuz0eg'
+  scholar: 'https://scholar.google.com/citations?user=BxqAB8gAAAAJ&hl=en'
 - id: donghyun-kim
   name_ko: 김동현
   name_en: Donghyun Kim
