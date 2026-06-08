@@ -1,8 +1,10 @@
 # ── Lab members ───────────────────────────────────────────
-# Renders as circular portrait + bio on the People (멤버) page.
-# Fields are bilingual (ko/en). photo: filename under
-# assets/img/people/ (empty → navy initials circle).
-# role: 랩장 / 멤버 ...   github / link: optional.
+# Renders as circular portrait + bio + social logos on the
+# People (멤버) page. Fields are bilingual (ko/en).
+#   photo    : filename under assets/img/people/ (empty → navy initials)
+#   github   : username  (→ github.com/username)
+#   linkedin : full LinkedIn URL (optional)
+#   scholar  : full Google Scholar URL (optional)
 ---
 - id: minsuk-sung
   name_ko: 성민석
@@ -13,7 +15,8 @@
   bio_en: Ph.D. student in Artificial Intelligence at Korea University
   photo: minsuk-sung.png
   github: minsuk-sung
-  link: ''
+  linkedin: 'https://www.linkedin.com/in/minsuk-sung/'
+  scholar: ''
 - id: juyoung-lee
   name_ko: 이주영
   name_en: Juyoung Lee
@@ -23,7 +26,8 @@
   bio_en: EY Consultant
   photo: juyoung-lee.png
   github: jubro839
-  link: ''
+  linkedin: ''
+  scholar: 'https://scholar.google.com/citations?hl=ko&user=UpxR71oAAAAJ&view_op=list_works&citft=1&citft=2&citft=3&email_for_op=mssung94%40gmail.com&gmla=AIqSsVsTFe_An_EznVCaH2Yi2NShrak3Gkm9w5F-XfzDs9RWPKUavlN7GpHjTMICw3SyNVQTpfR4hEL2HNXgZqHvmCYAtb1WcXC9orbMhgBkVZMSYB9F98nZ9KOBtIYzrFtCUpLgGe19vt7BJByv9j-4t3iHO7awXOlPFwexTB8X3cs_sm6NidmkBC9whF4FPBR6xFbOKG5WTGKop4mjXP5J0gQ1YGF1F58LIm8XNfdGT1hLqYo6IoNErf7OxpsBUqlDTHUTzSGF'
 - id: doohwi-cha
   name_ko: 차두휘
   name_en: Doohwi Cha
@@ -31,9 +35,10 @@
   role_en: Member
   bio_ko: 미래에셋증권
   bio_en: Mirae Asset Securities
-  photo: 'doohwi-cha.png'
+  photo: doohwi-cha.png
   github: DoohwiCha
-  link: ''
+  linkedin: ''
+  scholar: ''
 - id: minjae-lee
   name_ko: 이민재
   name_en: Minjae Lee
@@ -43,7 +48,8 @@
   bio_en: Quant @ Wavebridge
   photo: minjae-lee.png
   github: raphaelnz
-  link: https://www.linkedin.com/in/mj-lee-seoul/
+  linkedin: https://www.linkedin.com/in/mj-lee-seoul/
+  scholar: 'https://scholar.google.com/citations?hl=en&user=rkWGpNIAAAAJ&view_op=list_works&citft=1&citft=2&citft=3&email_for_op=mssung94%40gmail.com&gmla=AIqSsVuiQjcT10eARHfJ_qaiO4maXZfcsQ2xb1hgd-U502C5M0KEosuf79nz6k-xRiknfh5Hc-CgKl74_ueixZZp35vVQzqjbPHoAKQQg-mMUcxHddWPAx-kShufTqPelZZtASUdIOddjpQqVRRnafymbwYFITxgp1OJ0SOw28iJDEA3N-wKoQ_Kd1jlIDClG3Q1cBJsm5c3TzaBiFjIBkcIU3K45i70JjiYD4wasFn0RA'
 - id: seunghan-son
   name_ko: 손승한
   name_en: Seunghan Son
@@ -53,17 +59,19 @@
   bio_en: Add a one-line bio here.
   photo: seunghan-son.png
   github: Ginger-Tec
-  link: ''
+  linkedin: ''
+  scholar: ''
 - id: donghwa-seo
   name_ko: 서동화
   name_en: Donghwa Seo
   role_ko: 멤버
   role_en: Member
-  bio_ko: 한 줄 약력을 적어주세요.
-  bio_en: Add a one-line bio here.
+  bio_ko: 다올투자증권 · 공학박사
+  bio_en: Daol Investment & Securities · Ph.D. in Engineering
   photo: ''
   github: properitas95
-  link: ''
+  linkedin: ''
+  scholar: ''
 - id: hyunjun-yeo
   name_ko: 여현준
   name_en: Hyunjun Yeo
@@ -73,7 +81,8 @@
   bio_en: Physics department at Seoul National University
   photo: hyunjun-yeo.png
   github: hjyeo30
-  link: ''
+  linkedin: ''
+  scholar: 'https://scholar.google.com/citations?hl=en&user=BxqAB8gAAAAJ&view_op=list_works&citft=1&citft=2&citft=3&email_for_op=mssung94%40gmail.com&gmla=AIqSsVvx_F9Lrp2xU6sYf-uS1sxZ0TCuTvTrhYODHn3dnQNKa9dqpdeqO4mzomIDfCVXxPhqwrxjNhcB1XT7oXLE5Pq0Wc0jz4DYe4tLxVFklNWFXr4skFODosrnSlvr72ppMOT_mehRO485FB1g8Vq27u7CeAJqWH2UIQRb9alfPV8ifQAdhSLVVBU8-7UUnaKJX1IvFd9mDdu4xcqghq8uYBtln5TYxyj7KIkhmuz0eg'
 - id: donghyun-kim
   name_ko: 김동현
   name_en: Donghyun Kim
@@ -83,7 +92,8 @@
   bio_en: Toss
   photo: donghyun-kim.png
   github: wplong11
-  link: ''
+  linkedin: ''
+  scholar: ''
 - id: euihyung-lee
   name_ko: 이의형
   name_en: Euihyung Lee
@@ -93,7 +103,8 @@
   bio_en: Add a one-line bio here.
   photo: euihyung-lee.png
   github: uihyunglee
-  link: ''
+  linkedin: ''
+  scholar: ''
 - id: jungyu-jang
   name_ko: 장준규
   name_en: Jungyu Jang
@@ -103,4 +114,5 @@
   bio_en: Add a one-line bio here.
   photo: jungyu-jang.png
   github: page-a
-  link: ''
+  linkedin: ''
+  scholar: ''
