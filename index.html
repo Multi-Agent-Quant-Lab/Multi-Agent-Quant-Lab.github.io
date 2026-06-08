@@ -35,9 +35,9 @@ title: Home
       <p class="eyebrow"><span class="eyebrow__no">01</span>{% include t.html ko="멤버" en="People" %}</p>
       <h2 class="block__title">{% include t.html ko="사람이 가설을, 에이전트가 반복을" en="People set the thesis. Agents do the reps." %}</h2>
     </div>
-    <ul class="people people--compact">
+    <ul class="people">
       {% for m in site.data.members %}
-        {% include member-card.html member=m index=forloop.index0 compact=true %}
+        {% include member-card.html member=m index=forloop.index0 %}
       {% endfor %}
     </ul>
     <a class="morelink reveal" href="{{ '/people/' | relative_url }}">{% include t.html ko="멤버 전체 보기" en="Meet everyone" %} <span class="arr">→</span></a>
