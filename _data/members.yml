@@ -1,121 +1,106 @@
-# ── Lab members (10) ──────────────────────────────────────
-# Each entry renders as a circular portrait + short bio card on
-# the People (멤버) page. All text fields are bilingual (ko/en).
-#
-#   photo : path under assets/img/people/ (e.g. "minsuk.jpg").
-#           Leave "" to auto-show an initials circle instead.
-#   role  : 랩 리드 / 리서처 / 엔지니어 ...  (currently placeholder)
-#   bio   : one short sentence.            (currently placeholder)
-#   github / link : optional profile links.
-#
-# Names are real; roles/bios/photos are placeholders — fill them in.
-
+# ── Lab members ───────────────────────────────────────────
+# Renders as circular portrait + bio on the People (멤버) page.
+# Fields are bilingual (ko/en). photo: filename under
+# assets/img/people/ (empty → navy initials circle).
+# role: 랩장 / 멤버 ...   github / link: optional.
+---
 - id: minsuk-sung
-  name_ko: "성민석"
-  name_en: "Minsuk Sung"
-  role_ko: "랩 리드"
-  role_en: "Lab Lead"
-  bio_ko: "강화학습·실행 알고리즘. 사람은 가설을, 에이전트는 반복을."
-  bio_en: "RL & execution. Humans set the thesis, agents do the reps."
-  photo: ""
-  github: "minsuk-sung"
-  link: ""
-
+  name_ko: 성민석
+  name_en: Minsuk Sung
+  role_ko: 랩장
+  role_en: Lab Leader
+  bio_ko: 고려대학교 인공지능학과 박사과정
+  bio_en: Ph.D. student in Artificial Intelligence at Korea University
+  photo: minsuk-sung.png
+  github: minsuk-sung
+  link: ''
 - id: juyoung-lee
-  name_ko: "이주영"
-  name_en: "Juyoung Lee"
-  role_ko: "멤버"
-  role_en: "Member"
-  bio_ko: "한 줄 약력을 적어주세요."
-  bio_en: "Add a one-line bio here."
-  photo: ""
-  github: ""
-  link: ""
-
+  name_ko: 이주영
+  name_en: Juyoung Lee
+  role_ko: 멤버
+  role_en: Member
+  bio_ko: EY 컨설컨트
+  bio_en: EY Consultant
+  photo: juyoung-lee.png
+  github: jubro839
+  link: ''
 - id: doohwi-cha
-  name_ko: "차두휘"
-  name_en: "Doohwi Cha"
-  role_ko: "멤버"
-  role_en: "Member"
-  bio_ko: "한 줄 약력을 적어주세요."
-  bio_en: "Add a one-line bio here."
-  photo: ""
-  github: ""
-  link: ""
-
+  name_ko: 차두휘
+  name_en: Doohwi Cha
+  role_ko: 멤버
+  role_en: Member
+  bio_ko: 미래에셋증권
+  bio_en: Mirae Asset Securities
+  photo: ''
+  github: DoohwiCha
+  link: ''
 - id: minjae-lee
-  name_ko: "이민재"
-  name_en: "Minjae Lee"
-  role_ko: "멤버"
-  role_en: "Member"
-  bio_ko: "퀀트 개발자/트레이더 | AI 엔지니어 @Wavebridge. 自燈明 法燈明"
-  bio_en: "Quant Dev/Trader | AI Engineer @Wavebridge. Be your own lamp"
-  photo: ""
-  github: "raphaelnz"
-  link: "https://www.linkedin.com/in/mj-lee-seoul/"
-
+  name_ko: 이민재
+  name_en: Minjae Lee
+  role_ko: 멤버
+  role_en: Member
+  bio_ko: 퀀트 개발자/트레이더 | AI 엔지니어 @Wavebridge. 自燈明 法燈明
+  bio_en: Quant Dev/Trader | AI Engineer @Wavebridge. Be your own lamp
+  photo: minjae-lee.png
+  github: raphaelnz
+  link: https://www.linkedin.com/in/mj-lee-seoul/
 - id: seunghan-son
-  name_ko: "손승한"
-  name_en: "Seunghan Son"
-  role_ko: "멤버"
-  role_en: "Member"
-  bio_ko: "한 줄 약력을 적어주세요."
-  bio_en: "Add a one-line bio here."
-  photo: ""
-  github: ""
-  link: ""
-
+  name_ko: 손승한
+  name_en: Seunghan Son
+  role_ko: 멤버
+  role_en: Member
+  bio_ko: 한 줄 약력을 적어주세요.
+  bio_en: Add a one-line bio here.
+  photo: seunghan-son.png
+  github: Ginger-Tec
+  link: ''
 - id: donghwa-seo
-  name_ko: "서동화"
-  name_en: "Donghwa Seo"
-  role_ko: "멤버"
-  role_en: "Member"
-  bio_ko: "한 줄 약력을 적어주세요."
-  bio_en: "Add a one-line bio here."
-  photo: ""
-  github: ""
-  link: ""
-
+  name_ko: 서동화
+  name_en: Donghwa Seo
+  role_ko: 멤버
+  role_en: Member
+  bio_ko: 한 줄 약력을 적어주세요.
+  bio_en: Add a one-line bio here.
+  photo: ''
+  github: properitas95
+  link: ''
 - id: hyunjun-yeo
-  name_ko: "여현준"
-  name_en: "Hyunjun Yeo"
-  role_ko: "멤버"
-  role_en: "Member"
-  bio_ko: "한 줄 약력을 적어주세요."
-  bio_en: "Add a one-line bio here."
-  photo: ""
-  github: ""
-  link: ""
-
+  name_ko: 여현준
+  name_en: Hyunjun Yeo
+  role_ko: 멤버
+  role_en: Member
+  bio_ko: 서울대학교 물리학과
+  bio_en: Physics department at Seoul National University
+  photo: hyunjun-yeo.png
+  github: hjyeo30
+  link: ''
 - id: donghyun-kim
-  name_ko: "김동현"
-  name_en: "Donghyun Kim"
-  role_ko: "멤버"
-  role_en: "Member"
-  bio_ko: "한 줄 약력을 적어주세요."
-  bio_en: "Add a one-line bio here."
-  photo: ""
-  github: ""
-  link: ""
-
+  name_ko: 김동현
+  name_en: Donghyun Kim
+  role_ko: 멤버
+  role_en: Member
+  bio_ko: 토스
+  bio_en: Toss
+  photo: donghyun-kim.png
+  github: wplong11
+  link: ''
 - id: euihyung-lee
-  name_ko: "이의형"
-  name_en: "Euihyung Lee"
-  role_ko: "멤버"
-  role_en: "Member"
-  bio_ko: "한 줄 약력을 적어주세요."
-  bio_en: "Add a one-line bio here."
-  photo: ""
-  github: ""
-  link: ""
-
+  name_ko: 이의형
+  name_en: Euihyung Lee
+  role_ko: 멤버
+  role_en: Member
+  bio_ko: 한 줄 약력을 적어주세요.
+  bio_en: Add a one-line bio here.
+  photo: euihyung-lee.png
+  github: uihyunglee
+  link: ''
 - id: jungyu-jang
-  name_ko: "장준규"
-  name_en: "Jungyu Jang"
-  role_ko: "멤버"
-  role_en: "Member"
-  bio_ko: "한 줄 약력을 적어주세요."
-  bio_en: "Add a one-line bio here."
-  photo: ""
-  github: ""
-  link: ""
+  name_ko: 장준규
+  name_en: Jungyu Jang
+  role_ko: 멤버
+  role_en: Member
+  bio_ko: 한 줄 약력을 적어주세요.
+  bio_en: Add a one-line bio here.
+  photo: jungyu-jang.png
+  github: page-a
+  link: ''
