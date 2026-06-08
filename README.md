@@ -11,9 +11,8 @@ in a warm-academic / journal style.
 
 | Path | KO | What |
 |------|----|------|
-| `/` | 홈 | Overview, mission, layers, recent activities |
+| `/` | 홈 | Hero, members, recent activities |
 | `/about/` | 소개 | Mission, why multi-agent, who should join |
-| `/research/` | 연구 | Research tracks, build layers, tech stack |
 | `/people/` | 멤버 | Circular portraits + short bios (10 members) |
 | `/activities/` | 활동 | Study / session / talk logs |
 
