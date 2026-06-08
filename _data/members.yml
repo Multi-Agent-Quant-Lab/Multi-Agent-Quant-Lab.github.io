@@ -48,11 +48,11 @@
   name_en: "Minjae Lee"
   role_ko: "멤버"
   role_en: "Member"
-  bio_ko: "한 줄 약력을 적어주세요."
-  bio_en: "Add a one-line bio here."
+  bio_ko: "퀀트 개발자/트레이더 | AI 엔지니어 @Wavebridge. 自燈明 法燈明"
+  bio_en: "Quant Dev/Trader | AI Engineer @Wavebridge. Be your own lamp"
   photo: ""
-  github: ""
-  link: ""
+  github: "raphaelnz"
+  link: "https://www.linkedin.com/in/mj-lee-seoul/"
 
 - id: seunghan-son
   name_ko: "손승한"
