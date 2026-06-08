@@ -44,32 +44,13 @@ title: Home
   </div>
 </section>
 
-<!-- ── What we build (layers preview) ─────────────────────── -->
-<section class="block">
-  <div class="wrap">
-    <div class="block__head reveal">
-      <p class="eyebrow"><span class="eyebrow__no">02</span>{% include t.html ko="우리가 만드는 것" en="What we build" %}</p>
-      <h2 class="block__title">{% include t.html ko="데이터에서 실행까지, 하나의 파이프라인" en="From data to execution — one pipeline" %}</h2>
-    </div>
-    <ol class="layers">
-      <li class="layer reveal"><span class="layer__no">01</span><b>{% include t.html ko="데이터" en="Data" %}</b><span>{% include t.html ko="시세·호가·온체인·매크로 수집과 PIT 정합성" en="Market, order-book, on-chain & macro data with PIT integrity" %}</span></li>
-      <li class="layer reveal"><span class="layer__no">02</span><b>{% include t.html ko="리서치" en="Research" %}</b><span>{% include t.html ko="가설 생성 → 시그널 정의 → 통계 검증" en="Hypothesis → signal → statistical validation" %}</span></li>
-      <li class="layer reveal"><span class="layer__no">03</span><b>{% include t.html ko="전략" en="Strategy" %}</b><span>{% include t.html ko="전략 코드화, 파라미터 튜닝, 리스크 모듈" en="Strategy code, parameter tuning, risk modules" %}</span></li>
-      <li class="layer reveal"><span class="layer__no">04</span><b>{% include t.html ko="백테스트" en="Backtest" %}</b><span>{% include t.html ko="슬리피지·수수료·체결까지 재현 가능하게" en="Reproducible, with slippage, fees & fills" %}</span></li>
-      <li class="layer reveal"><span class="layer__no">05</span><b>{% include t.html ko="실행" en="Execution" %}</b><span>{% include t.html ko="페이퍼 → 라이브, 거래소 API 연동" en="Paper → live, exchange API integration" %}</span></li>
-      <li class="layer reveal"><span class="layer__no">06</span><b>{% include t.html ko="운영" en="Ops" %}</b><span>{% include t.html ko="모니터링·알림·사고 대응·포지션 관리" en="Monitoring, alerts, incident response, positions" %}</span></li>
-    </ol>
-    <a class="morelink reveal" href="{{ '/research/' | relative_url }}">{% include t.html ko="연구 트랙 자세히 보기" en="Explore research tracks" %} <span class="arr">→</span></a>
-  </div>
-</section>
-
 <!-- ── Recent activities ──────────────────────────────────── -->
 {% assign recent = site.activities | sort: 'date' | reverse %}
 {% if recent.size > 0 %}
 <section class="block block--alt">
   <div class="wrap">
     <div class="block__head reveal">
-      <p class="eyebrow"><span class="eyebrow__no">03</span>{% include t.html ko="최근 활동" en="Recent activities" %}</p>
+      <p class="eyebrow"><span class="eyebrow__no">02</span>{% include t.html ko="최근 활동" en="Recent activities" %}</p>
       <h2 class="block__title">{% include t.html ko="스터디 · 세션 · 발표 기록" en="Study, sessions & talks" %}</h2>
     </div>
     <ul class="actlist">
@@ -88,18 +69,3 @@ title: Home
   </div>
 </section>
 {% endif %}
-
-<!-- ── Philosophy ─────────────────────────────────────────── -->
-<section class="block">
-  <div class="wrap">
-    <div class="block__head reveal">
-      <p class="eyebrow"><span class="eyebrow__no">04</span>{% include t.html ko="우리가 믿는 것" en="What we value" %}</p>
-    </div>
-    <ul class="creed">
-      <li class="reveal"><span lang="ko">멋있어 보이는 모델보다 — <b>재현 가능한 결과</b></span><span lang="en">Reproducible results over impressive-looking models.</span></li>
-      <li class="reveal"><span lang="ko">예쁜 백테스트보다 — <b>Point-in-Time 정합성</b></span><span lang="en">Point-in-time integrity over pretty backtests.</span></li>
-      <li class="reveal"><span lang="ko">한 번 잘 맞은 신호보다 — <b>레짐을 넘는 강건성</b></span><span lang="en">Robustness across regimes over one lucky signal.</span></li>
-      <li class="reveal"><span lang="ko">빠른 프로토타입보다 — <b>실거래에 투입할 수 있는 안정성</b></span><span lang="en">Live-ready stability over fast prototypes.</span></li>
-    </ul>
-  </div>
-</section>
