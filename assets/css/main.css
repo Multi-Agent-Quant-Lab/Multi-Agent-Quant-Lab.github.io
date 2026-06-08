@@ -29,7 +29,7 @@
 
   /* scale */
   --wrap: 1140px;
-  --gutter: clamp(20px, 5vw, 48px);
+  --gutter: clamp(24px, 6vw, 48px);
   --section: clamp(60px, 9vw, 122px);
   --r: 6px;
   --r-lg: 16px;
@@ -343,7 +343,7 @@ html[data-lang="en"] .lang [data-lang-set="en"] { color: var(--navy); font-weigh
 @media (max-width: 920px) {
   .hero__in { grid-template-columns: 1fr; }
   .hero__device { order: -1; justify-self: start; aspect-ratio: auto; }
-  .hero__device img { width: 132px; }
+  .hero__device img { width: 104px; }
   .hero__ring { display: none; }
   .cols { grid-template-columns: 1fr; }
   .col-side { position: static; }
@@ -353,6 +353,7 @@ html[data-lang="en"] .lang [data-lang-set="en"] { color: var(--navy); font-weigh
 
 @media (max-width: 720px) {
   body { font-size: 16px; }
+  .brand__logo { height: 25px; }
   .navtoggle { display: block; order: 3; }
   .nav {
     position: fixed; inset: 62px 0 auto 0; background: var(--paper);
