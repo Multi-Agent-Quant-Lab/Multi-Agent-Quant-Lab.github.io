@@ -29,7 +29,7 @@
 
   /* scale */
   --wrap: 1140px;
-  --gutter: clamp(24px, 6vw, 48px);
+  --gutter: clamp(28px, 7vw, 48px);
   --section: clamp(60px, 9vw, 122px);
   --r: 6px;
   --r-lg: 16px;
@@ -258,6 +258,8 @@ html[data-lang="en"] .lang [data-lang-set="en"] { color: var(--navy); font-weigh
 .person__avatar img, .person__avatar .mono { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow); }
 .person__avatar img { filter: grayscale(1) contrast(1.02); transition: filter .4s; }
 .person:hover .person__avatar img { filter: grayscale(0); }
+/* Touch devices have no hover — keep portraits in full colour so they don't read as memorial photos */
+@media (hover: none) { .person__avatar img { filter: none; } }
 /* Restrained, uniform navy-family initials (premium; lets real
    photos shine later). Subtle tonal variation, no rainbow. */
 .mono { display: grid; place-items: center; font-weight: 700; font-size: 2.3rem; color: #f3f5f9; letter-spacing: -0.02em; position: relative; overflow: hidden; background: var(--navy); }
