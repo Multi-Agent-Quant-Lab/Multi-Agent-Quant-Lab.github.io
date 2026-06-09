@@ -343,9 +343,11 @@ html[data-lang="en"] .lang [data-lang-set="en"] { color: var(--navy); font-weigh
 
 /* ── responsive ─────────────────────────────────────────── */
 @media (max-width: 920px) {
-  .hero__in { grid-template-columns: 1fr; }
-  .hero__device { order: -1; justify-self: start; aspect-ratio: auto; }
-  .hero__device img { width: 104px; }
+  /* keep the navy mark beside the copy (like desktop), just compact */
+  .hero__in { display: flex; align-items: center; gap: clamp(18px, 4vw, 40px); }
+  .hero__text { flex: 1 1 auto; min-width: 0; }
+  .hero__device { flex: 0 0 auto; aspect-ratio: auto; }
+  .hero__device img { width: clamp(78px, 21vw, 132px); }
   .hero__ring { display: none; }
   .cols { grid-template-columns: 1fr; }
   .col-side { position: static; }
@@ -356,6 +358,11 @@ html[data-lang="en"] .lang [data-lang-set="en"] { color: var(--navy); font-weigh
 @media (max-width: 720px) {
   body { font-size: 16px; }
   .brand__logo { height: 25px; }
+  /* compact hero so the navy mark sits beside the copy without crowding */
+  .hero__title { font-size: clamp(1.8rem, 7.4vw, 2.35rem); }
+  .hero .eyebrow { display: block; font-size: 10.5px; letter-spacing: 0.14em; }
+  .hero .eyebrow::before { display: inline-block; vertical-align: middle; margin-right: 10px; }
+  .hero__device img { width: clamp(72px, 20vw, 110px); }
   .navtoggle { display: block; order: 3; }
   .nav {
     position: fixed; inset: 62px 0 auto 0; background: var(--paper);
